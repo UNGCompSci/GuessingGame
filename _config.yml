@@ -4,7 +4,7 @@ defaults:
       path: "" # an empty string here means all files in the project
     values:
       layout: post
-      title: Guessing Game by CubeTechLLC
+      title: Guessing Game by bgbrandongomez
       project: Guessing Game
       projectid: GuessingGame
       developer: bgbrandongomez
