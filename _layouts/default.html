@@ -4,19 +4,19 @@
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <link type="application/atom+xml" rel="alternate" href="http://senorcontento.github.io/blog/atom.xml" title="Señor Contento's Blog" />
-    <link rel="search" type="application/opensearchdescription+xml" href="/sitedata/opensearch.xml" title="Señor Contento's Blog">
-    <link rel="shortcut icon" type="image/jpg" href="/sitedata/images/favicon.jpg"/>   
-    <link rel="apple-touch-icon" href="/sitedata/images/favicon.jpg"/>
+    <link rel="search" type="application/opensearchdescription+xml" href="{{ page.site-url }}/sitedata/opensearch.xml" title="Señor Contento's Blog">
+    <link rel="shortcut icon" type="image/jpg" href="{{ page.site-url }}/sitedata/images/favicon.jpg"/>   
+    <link rel="apple-touch-icon" href="{{ page.site-url }}/sitedata/images/favicon.jpg"/>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!--jQuery Script-->
 
     <!--If you use max-width instead of max-device-width, you can test what the mobile formatting looks like by minimizing the window-->
-    <link id="mobile-style" rel="stylesheet" type="text/css" href="/sitedata/stylesheets/mobile-stylesheet.css" media="screen and (max-device-width: 800px)">
-    <link id="pc-style" rel="stylesheet" type="text/css" href="/sitedata/stylesheets/stylesheet.css" media="screen and (min-device-width: 800px)">
-    <link id="pygment-default" rel="stylesheet" type="text/css" href="/sitedata/stylesheets/pygment_trac.css" media="screen">
+    <link id="mobile-style" rel="stylesheet" type="text/css" href="{{ page.site-url }}/sitedata/stylesheets/mobile-stylesheet.css" media="screen and (max-device-width: 800px)">
+    <link id="pc-style" rel="stylesheet" type="text/css" href="{{ page.site-url }}/sitedata/stylesheets/stylesheet.css" media="screen and (min-device-width: 800px)">
+    <link id="pygment-default" rel="stylesheet" type="text/css" href="{{ page.site-url }}/sitedata/stylesheets/pygment_trac.css" media="screen">
 
-    <script src="/sitedata/javascripts/mobile-tracking.js"></script>
+    <script src="{{ page.site-url }}/sitedata/javascripts/mobile-tracking.js"></script>
     <!--Allows me to detect if the site is being visited by a mobile device - Allows user to override normal settings-->
 
     <script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
@@ -25,20 +25,20 @@
     <meta name="google-site-verification" content="3JaraXltIxYRyk9XMRv-4bPm62bKTb2AqNkuKV85bf4" />
     <!--This tag is so I can get and control Google adding my site to their search engine-->
     
-    <script src="/sitedata/javascripts/google-tracking.js"></script>
+    <script src="{{ page.site-url }}/sitedata/javascripts/google-tracking.js"></script>
     <!--This code will allow me to see how many people view my site and the pages on the site-->
 
-    <script src="/sitedata/bower_components/webcomponentsjs/webcomponents.js"></script>
+    <script src="{{ page.site-url }}/sitedata/bower_components/webcomponentsjs/webcomponents.js"></script>
     <!--Polyfill Web Components-->
 
-    <link rel="import" href="/sitedata/shadowdom.html">
+    <link rel="import" href="{{ page.site-url }}/sitedata/shadowdom.html">
     <!--Import code for allowing custom html using ShadowDom-->
 
     <script type="text/x-mathjax-config">
         MathJax.Hub.Config({
           elements: document.getElementsByTagName("body")
         });
-        MathJax.Ajax.config.path["Contrib"] = "/sitedata/javascripts";
+        MathJax.Ajax.config.path["Contrib"] = "{{ page.site-url }}/sitedata/javascripts";
         MathJax.Hub.config.extensions.push("[Contrib]/math-tex-element.js");
     </script>
     <!--This fixes the fact that Custom HTML elements in ShadowDom breaks MathJax.-->    
@@ -53,14 +53,14 @@
         <h2>{{ page.description }}</h2>
 
         <nav><section id="general">
-          <a href="/blog/" class="btn btn-github">Blog</a>
-          <a href="/contact.html" class="btn btn-github">Contact Me</a>
-          <a href="/index.html" class="btn btn-github">Site Home</a>
+          <a href="https://github.com/{{ page.developer }}/{{ page.projectid }}/zipball/{{ page.branch }}" class="btn">Download as .zip</a>
+          <a href="https://github.com/{{ page.developer }}/{{ page.projectid }}/tarball/{{ page.branch }}" class="btn">Download as .tar.gz</a>
+          <a href="https://github.com/{{ page.developer }}/{{ page.projectid }}/" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
         </section>
-
         <section id="developer">
-          <a href="/developers.html" class="btn btn-github">View Developers and Organizations</a>
-          <a href="/repositories.html" class="btn btn-github">View Repositories</a>
+          <a href="releases.html" class="btn">Releases</a>
+          <a href="index.html" class="btn">Project Home</a>
+          <a href="{{ page.site-url }}" class="btn">Site Home</a>
         </section></nav>
       </div>
     </header>
@@ -72,7 +72,7 @@
     </div>
 
     <br><br>
-    <hr><footer><a class="inline" href="https://app.pith.li/create?url={{page.site-url}}{{page.url}}">Highlight Page</a> <a class="inline" href="{{site.github.repository_url}}/blob/{{page.branch}}/{{page.path}}">View This Page on Github</a> <h5 class="inline">&copy; 2015 CubeTech, LLC</h5></footer>
+    <hr><footer><a class="inline" href="https://app.pith.li/create?url={{page.project-url}}{{page.url}}">Highlight Page</a> <a class="inline" href="{{site.github.repository_url}}/blob/{{page.branch}}/{{page.path}}">View This Page on Github</a> <h5 class="inline">&copy; 2015 CubeTech, LLC</h5></footer>
     <!--I have discovered the <hr> tag allows the bar that you would see for the footer without css configuration. Do note, there is no </hr> closing tag, just an opening tag-->
     <!--For Future Reference, the nav tag and footer tag do absolutely nothing unless a reader, like one for the blind, uses it or if I use css to make a format for it-->
   </body>

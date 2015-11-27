@@ -1,14 +1,13 @@
 ---
-layout: post
-title: Guessing Game by CubeTechLLC
-project: Guessing Game
 description: A sample syntax hightlighting page to demonstrate how to syntax hightlight
 ---
-{% include header.html %}
-<h3><a id="what-is-this" class="anchor" href="#what-is-this" aria-hidden="true"><span class="octicon octicon-link"></span></a>What Is This?</h3>
-<p>This page is only here to test Pygments and Redcarpet. It is not intended to be part of the actual site, but I am leaving the page here to demonstrate syntax highlighting. The command I used to generate the css file responsible for syntax highlighting is pygmentize -S default -f html > stylesheets/pygment_trac.css. After some experimentation I found that different styles besides default exist e.g. autumn. Styles can be listed by using the command pygmentize -L styles.</p>
-<br>
-<h3><a id="sample-code" class="anchor" href="#sample-code" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sample Code:</h3>
+
+### What Is This?
+
+This page is only here to test Pygments and Redcarpet. It is not intended to be part of the actual site, but I am leaving the page here to demonstrate syntax highlighting. The command I used to generate the css file responsible for syntax highlighting is pygmentize -S default -f html > stylesheets/pygment_trac.css. After some experimentation I found that different styles besides default exist e.g. autumn. Styles can be listed by using the command pygmentize -L styles.
+
+### Sample Code:
+
 {% highlight java %}
 import java.util.*;
 
@@ -47,8 +46,9 @@ public class GuessingGame {
   }
 }
 {% endhighlight %}
-<br>
-<h3><a id="sample-code-linenos" class="anchor" href="#sample-code-linenos" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sample Code With Line Numbers:</h3>
+
+### Sample Code With Line Numbers:
+
 {% highlight java linenos %}
 import java.util.*;
 
@@ -87,4 +87,3 @@ public class GuessingGame {
   }
 }
 {% endhighlight %}
-{% include footer.html %}
