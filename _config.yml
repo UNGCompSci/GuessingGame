@@ -10,4 +10,7 @@ defaults:
       developer: bgbrandongomez
       branch: master
       description: A fun little game in which you get to guess what number the computer is thinking.
-      siteurl: https://senorcontento.github.io/
+      site-url: https://senorcontento.github.io
+      date: 0000-00-00 00:00:00
+
+markdown: kramdown
